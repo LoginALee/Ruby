@@ -11,11 +11,9 @@ class BookInStock
   def price=(new_price)
     @price = new_price
   end
+  def price_in_cents
+    Integer(price*100 + 0.5)
+  end
 end
 
-book = BookInStock.new("isbn1", 33.80)
-puts "ISBN= #{book.isbn}"
-puts "Price= #{book.price}"
-book.price = book.price * 0.75
-# discount price
-puts "New price = #{book.price}"
+
