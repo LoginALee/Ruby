@@ -6,16 +6,12 @@ class BookInStock
   def to_s
     "ISBN: #{@isbn}, price: #{@price}"
   end
-  def isbn
-    @isbn
-  end
-  def price
-    @price
-  end
+  attr_reader :isbn, :price  
 end
 
 b1 = BookInStock.new("isbn1", 3)
-puts  b1
+puts "ISBN of b1: #{b1.isbn}"
+puts "Price of b1: #{b1.price}"
 b2 = BookInStock.new("isbn2", 3.14)
 puts b2
 b3 = BookInStock.new("isbn3", "5.67")
